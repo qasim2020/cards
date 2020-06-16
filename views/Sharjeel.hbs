@@ -18,12 +18,14 @@
     }
     nav{
       display: flex;
-      height: 200px;
+      /* height: 200px; */
       align-items: center;
       justify-content: space-between;
-      background: teal;
+      background: white;
       margin-bottom: 80px;
-      padding: 10px;
+      /* padding: 10px; */
+      max-width: 1100px;
+      margin: auto;
     }
     nav > h1{
       font-weight: bold;
@@ -110,8 +112,9 @@
     </div>
 <div class="outer">
   {{#each cards}}
+  <!-- val >> this, index >> @index -->
   <div class="card {{this.[3]}}">
-    <p>#{{this.[0]}}</p>
+    <p>#{{sumOne @index}}</p>
     <p>{{this.[1]}}</p>
     <p>Last Lve: {{changeToPrettyDate this.[2]}}</p>
     <p>Days Since Last Leave: {{this.[4]}} </p>

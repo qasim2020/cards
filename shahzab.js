@@ -8,3 +8,6 @@ console.log('defined array:', array);
 
 
 console.log(array);
+
+
+// Assignment # 2..
