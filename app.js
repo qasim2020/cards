@@ -81,8 +81,13 @@ app.get('/addData', function(req, res) {
   res.render('adddata.hbs');
 })
 
-app.get('/torees', function(req, res) {
-  res.render('torees.hbs', {});
+app.get('/jQuery', function(req, res) {
+  res.sendFile(__dirname + '/public/jQuery.js');
+})
+
+app.get('/fonts/:id', function(req, res) {
+  console.log(req.param);
+  res.sendFile(__dirname + '/public/fonts/' + req.param.font);
 })
 
 app.listen(3000)
