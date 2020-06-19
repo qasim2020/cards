@@ -3,8 +3,8 @@ const readXlsxFile = require('read-excel-file/node');
 const hbs = require('hbs');
 const app = express()
 
-hbs.registerHelper("sumOne", function(value) {
-  return value + 1;
+hbs.registerHelper("SumOne", function (value){
+  return value=value+1;
 })
 
 hbs.registerHelper("changeToPrettyDate", function(value) {
