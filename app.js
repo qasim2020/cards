@@ -1,10 +1,16 @@
 const express = require('express')
 const readXlsxFile = require('read-excel-file/node');
 const hbs = require('hbs');
-const app = express()
+const app = express();
+
+app.use(express.static(__dirname+'/public'));
 
 hbs.registerHelper("SumOne", function (value){
   return value=value+1;
+})
+
+hbs.registerHelper("ceil", function(value){
+  return Math.ceil(value);
 })
 
 hbs.registerHelper("changeToPrettyDate", function(value) {
@@ -77,12 +83,8 @@ let newFunction = function(valtwo) {
 }
 
 // a new route has been added at this point
-app.get('/addData', function(req, res) {
+app.get('/Edit', function(req, res) {
   res.render('adddata.hbs');
-})
-
-app.get('/torees', function(req, res) {
-  res.render('torees.hbs', {});
 })
 
 app.listen(3000)
