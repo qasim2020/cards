@@ -83,7 +83,7 @@ let newFunction = function(valtwo) {
 }
 
 // a new route has been added at this point
-app.get('/addData', function(req, res) {
+app.get('/Edit', function(req, res) {
   res.render('adddata.hbs');
 })
 
